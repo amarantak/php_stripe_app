@@ -4,16 +4,20 @@ var stripe = Stripe('pk_test_51Q2aif2L80WeTT2nIzCBH1xreUXkGkimxTvyD3mSixDXEKRkyP
 // Create an instance of Elements
 var elements = stripe.elements();
 
+// Function to get CSS variable value
+function getCssVariable(variable) {
+  return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+}
+
 // Custom styling can be passed to options when creating an Element.
-// (Note that this demo uses a wider set of styles than the guide below.)
 var style = {
   base: {
-    color: '#32325d',
-    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    color: 'red',
+    fontFamily: '"Lato", sans-serif',
     fontSmoothing: 'antialiased',
     fontSize: '16px',
-    '::placeholder': {
-      color: '#aab7c4'
+    '::placeholder':{
+      color: '#141414'
     }
   },
   invalid: {
@@ -24,7 +28,7 @@ var style = {
 
 // Cutoms Style button with BS
 document.querySelector('#payment-form button').classList =
-  'btn btn-primary btn-block mt-4';
+  'btn custom-color custom-color2 font-weight-bold btn-block mt-4';
 
 // Create an instance of the card Element
 var card = elements.create('card', { style: style });

@@ -1,5 +1,42 @@
+/* Define CSS variables for colors */
+:root {
+  --primary-color: #141414; /* Custom primary color */ 
+}
+
+body{
+  background-color: var(--primary-color);
+  font-family: "Lato", sans-serif;  
+  font-style: normal;
+}
+
+.custom-color{
+  background-color: #7D6BEC;
+  color: #7D6BEC;
+}
+
+.custom-color2{ 
+  color: #141414;
+}
+.custom-color3{ 
+  background-color: #252525;
+}
+
+.btn:hover{
+  background-color: #6950C5;
+  cursor: pointer;
+}
+
+.card{
+  border-radius: 10px;
+}
+
+.custom-height {
+  height: 25px;
+}
+
+
 .StripeElement {
-    background-color: white;
+    /* background-color: white; */
     height: 40px;
     padding: 10px 12px;
     border-radius: 4px;
